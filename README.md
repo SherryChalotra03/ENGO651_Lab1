@@ -13,8 +13,8 @@ This project is a Book Review Website built using Flask, PostgreSQL, and HTML/CS
 **6. Database Integration:** Uses PostgreSQL for storing users, books, and reviews. <br>
 
 # Project Structure
-project1-2/
-│── application.py       # Main Flask application file <br>
+project1-2/ <br>
+│── application.py         # Main Flask application file <br>
 │── books.csv            # Dataset with book information <br>
 │── import.py            # Script to import books.csv into PostgreSQL <br>
 │── password.txt         # Stores the database password <br>
