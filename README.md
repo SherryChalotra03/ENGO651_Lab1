@@ -35,12 +35,47 @@ project1-2/ <br>
 
 # **Setup and Installation**
 **1. Clone the Repository:** 
+git clone https://github.com/yourusername/project1-2.git
+cd project1-2
 
 
 **2. Install Dependencies:** Create a virtual environment and install the required packages:
 
-If you encounter with an Policy set up issues, follow the instructions and reactive the virtual environment
+-- Activate Virtual Environment: .venv\Scripts\activate
+
+-- **_Note:_** If you encounter an execution policy error, you might need to change the policy for the current session: 
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+Then, try activating again.
+
+-- pip3 install -r requirements.txt
+
 **3. Setup the PostgreSQL Database:** Ensure PostgreSQL is installed and create a new database:
+CREATE DATABASE ENGO651;
+CREATE SCHEMA lab1;
+
+_Create three tables books, users and reviews under schema lab1_
+
+Set the Environment Variable in PowerShell
+$env:DATABASE_URL = "postgresql://postgres:123456@localhost/ENGO651"
+
+After running that, verify it's set by typing:
+echo $env:DATABASE_URL
+You should see: postgresql://postgres:123456@localhost/ENGO651
+
+**4. Import Books Data**
+
+Run the following command to populate the database:
+python import.py
+
+**5. Set the Flask App (if not already set)**
+If your file is named application.py, you should also set the FLASK_APP variable:
+$env:FLASK_APP = "application.py"
+Again, verify it with: echo $env:FLASK_APP
+
+**6. Run Your Flask App**
+Now, start your application by running: flask run
+
+Start the development server and Open the website in a browser at: http://127.0.0.1:5000/
 
 
 
