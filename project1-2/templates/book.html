@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{ book[2] }}</h2>
+<p><strong>Author:</strong> {{ book[3] }}</p>
+<p><strong>Publication Year:</strong> {{ book[4] }}</p>
+<p><strong>ISBN:</strong> {{ book[1] }}</p>
+
+<h3>Reviews:</h3>
+{% if reviews %}
+    <ul>
+        {% for review in reviews %}
+        <li><strong>{{ review[2] }}:</strong> Rated {{ review[0] }}/5 - "{{ review[1] }}"</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No reviews yet. Be the first to review this book!</p>
+{% endif %}
+<!-- Back Button -->
+<button onclick="history.back()">Go Back</button>
+{% endblock %}

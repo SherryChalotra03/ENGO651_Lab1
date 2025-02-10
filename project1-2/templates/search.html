@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Search for Books</h2>
+
+<form method="post" action="{{ url_for('search') }}" class="search-form">
+    <input type="text" name="query" id="query" placeholder="Search by title, author, or ISBN">
+    <button type="submit">Search</button>
+</form>
+
+{% if error %}
+    <p class="error-message">{{ error }}</p>
+{% endif %}
+
+{% if books %}
+    <h3>Search Results</h3>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book[1] }}</td>  <!-- ISBN -->
+                <td><a href="{{ url_for('book', book_id=book[0]) }}">{{ book[2] }}</a></td>  <!-- Title -->
+                <td>{{ book[3] }}</td>  <!-- Author -->
+                <td>{{ book[4] }}</td>  <!-- Year -->
+                <td><a href="{{ url_for('book', book_id=book[0]) }}">View Details</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+
+{% endblock %}

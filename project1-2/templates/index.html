@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Welcome to the Book Review Platform</h2>
+<p>Discover, review, and share your thoughts on thousands of books! Whether you're a casual reader or a book enthusiast, this platform lets you explore book reviews, rate books, and engage with a community of fellow readers.</p>
+
+<h3>Features:</h3>
+
+    <p>🔍 Search for books by title, author, or ISBN.</p>
+    <p>✍️ Write and read reviews from fellow book lovers.</p>
+    <p>📊 View book details, including author and publication year.</p>
+    <p>📚 Keep track of your favorite books.</p>
+
+
+<p><a href="{{ url_for('register') }}" class="btn">Join Now</a> or <a href="{{ url_for('login') }}" class="btn">Login</a> to get started!</p>
+{% endblock %}

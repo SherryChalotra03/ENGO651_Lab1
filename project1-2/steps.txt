@@ -1,0 +1,35 @@
+ENGO 651 Assignment requirements-- 
+
+1. Activating Virtual Environment
+
+1. Activate Virtual Environment: .venv\Scripts\activate
+2. Note: If you encounter an execution policy error, you might need to change the policy for the current session: 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+Then, try activating again.
+
+3. Set the Environment Variable in PowerShell
+$env:DATABASE_URL = "postgresql://postgres:123456@localhost/ENGO651"
+
+4. After running that, verify it's set by typing:
+echo $env:DATABASE_URL
+
+You should see: postgresql://postgres:123456@localhost/ENGO651
+
+5. Set the Flask App (if not already set)
+If your file is named application.py, you should also set the FLASK_APP variable:
+
+$env:FLASK_APP = "application.py"
+
+Again, verify it with: echo $env:FLASK_APP
+
+6. Run Your Flask App
+Now, start your application by running: flask run
+
+or if you prefer to run it directly: python application.py
+
+
+
+
+
+
+

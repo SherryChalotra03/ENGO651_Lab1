@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review Platform</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}" class="btn-nav">Home</a>
+        <a href="{{ url_for('search') }}" class="btn-nav">Search</a>
+        {% if session.get('user_id') %}
+            <a href="{{ url_for('logout') }}" class="btn-nav">Logout ({{ session.get('username', 'User') }})</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn-nav">Login</a>
+            <a href="{{ url_for('register') }}" class="btn-nav">Register</a>
+        {% endif %}
+    </nav>
+    <div class="container-layout">
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
