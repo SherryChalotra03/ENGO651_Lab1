@@ -14,24 +14,24 @@ This project is a Book Review Website built using Flask, PostgreSQL, and HTML/CS
 
 # Project Structure
 project1-2/ <br>
-│── application.py  &nbsp;&nbsp;&nbsp;&nbsp;       # Main Flask application file <br>
-│── books.csv            # Dataset with book information <br>
-│── import.py            # Script to import books.csv into PostgreSQL <br>
-│── password.txt         # Stores the database password <br>
-│── requirements.txt     # Dependencies required for the project <br>
-│── steps.txt            # Step-by-step instructions for setup (you can ignore this) <br>
-│── static/              # CSS and static files <br>
-│   └── style.css        # Main stylesheet <br>
-│── templates/           # HTML templates for Flask <br>
-│   ├── book.html        # Book details page <br>
-│   ├── index.html       # Home page <br>
-│   ├── layout.html      # Base layout for the site <br>
-│   ├── login.html       # Login page <br>
-│   ├── register.html    # Registration page <br>
-│   ├── search.html      # Search form <br>
-│   ├── search_results.html  # Search results page <br>
-│── flask_session/       # Session storage folder <br>
-│── __pycache__/         # Python cache files <br>
+│── application.py  &nbsp;&nbsp;&nbsp;&nbsp; # Main Flask application file <br>
+│── books.csv       &nbsp;&nbsp;&nbsp;&nbsp;     # Dataset with book information <br>
+│── import.py       &nbsp;&nbsp;&nbsp;&nbsp;      # Script to import books.csv into PostgreSQL <br>
+│── password.txt    &nbsp;&nbsp;&nbsp;&nbsp;      # Stores the database password <br>
+│── requirements.txt  &nbsp;&nbsp;&nbsp;&nbsp;    # Dependencies required for the project <br>
+│── steps.txt       &nbsp;&nbsp;&nbsp;&nbsp;      # Step-by-step instructions for setup (you can ignore this) <br>
+│── static/         &nbsp;&nbsp;&nbsp;&nbsp;      # CSS and static files <br>
+│   └── style.css   &nbsp;&nbsp;&nbsp;&nbsp;      # Main stylesheet <br>
+│── templates/      &nbsp;&nbsp;&nbsp;&nbsp;      # HTML templates for Flask <br>
+│   ├── book.html   &nbsp;&nbsp;&nbsp;&nbsp;      # Book details page <br>
+│   ├── index.html  &nbsp;&nbsp;&nbsp;&nbsp;      # Home page <br>
+│   ├── layout.html &nbsp;&nbsp;&nbsp;&nbsp;      # Base layout for the site <br>
+│   ├── login.html  &nbsp;&nbsp;&nbsp;&nbsp;      # Login page <br>
+│   ├── register.html  &nbsp;&nbsp;&nbsp;&nbsp;   # Registration page <br>
+│   ├── search.html    &nbsp;&nbsp;&nbsp;&nbsp;   # Search form <br>
+│   ├── search_results.html &nbsp;&nbsp;&nbsp;&nbsp;   # Search results page <br>
+│── flask_session/    &nbsp;&nbsp;&nbsp;&nbsp;    # Session storage folder <br>
+│── __pycache__/       &nbsp;&nbsp;&nbsp;&nbsp;   # Python cache files <br>
 
 # **Setup and Installation**
 **1. Clone the Repository:** <br>
