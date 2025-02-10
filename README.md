@@ -4,7 +4,7 @@ Lab 1 introduces to Python, Flask, Postgres
 **Overview**
 This project is a Book Review Website built using Flask, PostgreSQL, and HTML/CSS. Users can register, log in, search for books, view book details, leave reviews, and browse reviews from other users. The application also integrates session management for authentication and user interaction.
 
-**Features**
+**Features** <br>
 **1. User Authentication:** Register, Login, Logout functionality.
 **2. Book Search:** Search books by title, author, or ISBN. (Search also works for part of values entered by users)
 **3. Book Details Page:** View book details and user reviews.
